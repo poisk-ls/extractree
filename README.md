@@ -19,10 +19,10 @@ This script will extract to display the path of the folder 📂 and 🗃️ file
 ### FOR ANDROID
 
 **usage:** 
-- python extractree.py /path/folder
+- python extractree.py -r /path/folder
 
 **Ex.**
-- python extractree.py /sdcard/download
+- python extractree.py -r /sdcard/download
 
 #
 
