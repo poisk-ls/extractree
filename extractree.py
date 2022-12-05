@@ -301,7 +301,7 @@ def fake2realpath(path, target):
 
 
 def adjustUnicodeError():
-	exit_with_msg('The system seems to have an uncommon default encoding. Restart eviltree with options -q and -A to resolve this issue.')
+	exit_with_msg('The system seems to have an uncommon default encoding. Restart extractree with options -q and -A to resolve this issue.')
 
 
 # ~ child = '├── ' if not args.ascii else '|-- '
@@ -314,7 +314,7 @@ total_dirs_processed = 0
 total_files_processed = 0
 
 
-def eviltree(root_dir, intent = 0, depth = '', depth_level = depth_level):
+def extractree(root_dir, intent = 0, depth = '', depth_level = depth_level):
 
 	try:
 		global total_dirs_processed, total_files_processed		
@@ -527,7 +527,7 @@ def eviltree(root_dir, intent = 0, depth = '', depth_level = depth_level):
 				if (sub_dirs or sub_files) and (intent + 1) < depth_level:
 					tmp = depth
 					depth = depth + parent if i < (total_dirs - 1) else depth + '    '
-					eviltree(joined_path + os.sep, intent + 1, depth)
+					extractree(joined_path + os.sep, intent + 1, depth)
 					depth = tmp
 			
 
@@ -541,7 +541,7 @@ def eviltree(root_dir, intent = 0, depth = '', depth_level = depth_level):
 		exit_with_msg('Keyboard interrupt.')
 		
 	except Exception as e:
-		exit_with_msg('Something went wrong. Consider creating an issue about this in the original repo (https://github.com/t3l3machus/eviltree)\n' + BOLD + 'Error Details' + END +': ' + str(e))
+		exit_with_msg('Something went wrong. Consider creating an issue about this in the original repo (https://github.com/t3l3machus/extractree)\n' + BOLD + 'Error Details' + END +': ' + str(e))
 
 
 
@@ -556,7 +556,7 @@ def main():
 	root_dir = args.root_path if args.root_path[-1] == os.sep else args.root_path + os.sep	
 	
 	if os.path.exists(root_dir):
-		eviltree(root_dir)
+		extractree(root_dir)
 		print('\n' + str(total_dirs_processed) + ' directories, ' + str(total_files_processed) + ' files')
 		
 	else:
