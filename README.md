@@ -16,17 +16,19 @@
                    [-A] [-d] [-l] [-q]
 
 ### FOR ANDROID
-```
+
 **usage:** 
 - python extractree.py /path/folder
+
 **Ex.**
 - python extractree.py /sdcard/download
-```
+
 #
 
-NOTE: I'M NOT OWN THIS SCRIPT.
+**NOTE: I'M NOT OWN THIS SCRIPT.**
 
-FOR MORE INFO VISIT THE ORIGINAL OWNER https://github.com/t3l3machus/
+**FOR MORE INFO VISIT THE ORIGINAL OWNER**
+- https://github.com/t3l3machus
 
 # THANKS TO 
 - https://github.com/t3l3machus/eviltree
