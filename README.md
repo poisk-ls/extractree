@@ -1,14 +1,15 @@
 # ExtracTree
+This script will extract to display the path of the folder 📂 and 🗃️ files of your smartphone.
 
-
-# Installation.. 
+#
+### Installation Command..
 - pkg install git
 - pkg install python
 - pkg install python2
 - pkg install python3
 - git clone https://github.com/poisk-/ExtracTree
 
-**USAGE**
+# USAGE
 
 ### FOR WINDOWS
 **usage:** extractree.py [-h] -r ROOT_PATH [-k KEYWORDS] [-x REGEX]
